@@ -1,0 +1,835 @@
+/* ==========================================================
+   CULTURE ROLEPLAY
+   STYLE.CSS
+========================================================== */
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--font);
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    position:relative;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+input,
+textarea,
+select{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ==========================================================
+   PAGE WRAPPER
+========================================================== */
+
+.page-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    z-index:var(--z-normal);
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container{
+
+    width:min(
+
+        100% - 40px,
+
+        var(--container)
+
+    );
+
+    margin:auto;
+
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top left,
+
+            rgba(59,130,246,.18),
+
+            transparent 40%
+
+        ),
+
+        radial-gradient(
+
+            circle at bottom right,
+
+            rgba(212,175,55,.12),
+
+            transparent 35%
+
+        ),
+
+        linear-gradient(
+
+            180deg,
+
+            #08111f,
+
+            #05080f
+
+        );
+
+    z-index:var(--z-background);
+
+}
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.background-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+        rgba(0,0,0,.35);
+
+    backdrop-filter:
+
+        blur(2px);
+
+    z-index:var(--z-overlay);
+
+}
+
+/* ==========================================================
+   GRID PATTERN
+========================================================== */
+
+.background-pattern{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255,255,255,.03) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255,255,255,.03) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:
+
+        40px 40px;
+
+    opacity:.35;
+
+    z-index:var(--z-overlay);
+
+}
+
+/* ==========================================================
+   PAGE LOADER
+========================================================== */
+
+#pageLoader{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #08111f,
+
+            #05080f
+
+        );
+
+    z-index:var(--z-loader);
+
+    transition:
+
+        opacity .6s ease,
+
+        visibility .6s ease;
+
+}
+
+#pageLoader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+#pageLoader span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   LOADER RING
+========================================================== */
+
+.loader-ring{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:
+
+        5px solid
+
+        rgba(255,255,255,.08);
+
+    border-top:
+
+        5px solid
+
+        var(--primary);
+
+    border-right:
+
+        5px solid
+
+        var(--secondary);
+
+    animation:
+
+        loaderSpin
+
+        1s linear infinite;
+
+    box-shadow:
+
+        var(--shadow-gold);
+
+}
+
+/* ==========================================================
+   SCROLL TO TOP
+========================================================== */
+
+#scrollTopBtn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            var(--primary),
+
+            var(--primary-dark)
+
+        );
+
+    color:#111;
+
+    font-size:18px;
+
+    box-shadow:
+
+        var(--shadow-md);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+
+        translateY(20px);
+
+    transition:
+
+        var(--transition);
+
+    z-index:999;
+
+}
+
+#scrollTopBtn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+
+        translateY(0);
+
+}
+
+#scrollTopBtn:hover{
+
+    transform:
+
+        translateY(-5px);
+
+    box-shadow:
+
+        var(--shadow-gold);
+
+}
+
+/* ==========================================================
+   GLOW EFFECT
+========================================================== */
+
+.hero-glow{
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.18;
+
+    pointer-events:none;
+
+}
+
+.hero-glow-1{
+
+    top:-120px;
+
+    left:-120px;
+
+    background:
+
+        var(--secondary);
+
+}
+
+.hero-glow-2{
+
+    bottom:-120px;
+
+    right:-120px;
+
+    background:
+
+        var(--primary);
+
+}
+
+/* ==========================================================
+   KEYFRAMES
+========================================================== */
+
+@keyframes loaderSpin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:
+
+            translateY(0px);
+
+    }
+
+    50%{
+
+        transform:
+
+            translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:
+
+            translateY(0px);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        box-shadow:
+
+            0 0 0 rgba(212,175,55,0);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+            0 0 35px rgba(212,175,55,.35);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+            0 0 0 rgba(212,175,55,0);
+
+    }
+
+}
+
+/* ==========================================================
+   UTILITY CLASSES
+========================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.show{
+
+    display:block;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.w-100{
+
+    width:100%;
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.float{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   GLASS EFFECT
+========================================================== */
+
+.glass{
+
+    background:var(--glass);
+
+    backdrop-filter:var(--blur);
+
+    -webkit-backdrop-filter:var(--blur);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ==========================================================
+   SECTION DEFAULT
+========================================================== */
+
+section{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+.section-spacing{
+
+    padding:80px 0;
+
+}
+
+/* ==========================================================
+   FADE REVEAL
+========================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.hover-lift{
+
+    transition:var(--transition);
+
+}
+
+.hover-lift:hover{
+
+    transform:
+
+        translateY(-8px);
+
+}
+
+/* ==========================================================
+   BUTTON TRANSITION
+========================================================== */
+
+button{
+
+    transition:var(--transition);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================================================
+   INPUT DEFAULT
+========================================================== */
+
+input,
+textarea,
+select{
+
+    transition:var(--transition);
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* ==========================================================
+   SELECTION FIX
+========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#111;
+
+}
+
+/* ==========================================================
+   ANIMATION DELAY
+========================================================== */
+
+.delay-1{
+
+    animation-delay:.1s;
+
+}
+
+.delay-2{
+
+    animation-delay:.2s;
+
+}
+
+.delay-3{
+
+    animation-delay:.3s;
+
+}
+
+.delay-4{
+
+    animation-delay:.4s;
+
+}
+
+.delay-5{
+
+    animation-delay:.5s;
+
+}
+
+/* ==========================================================
+   FOOTER SPACING
+========================================================== */
+
+footer{
+
+    margin-top:80px;
+
+}
+
+/* ==========================================================
+   SMOOTH TRANSITION
+========================================================== */
+
+*{
+
+    transition-property:
+
+        background-color,
+
+        border-color,
+
+        color,
+
+        box-shadow,
+
+        transform,
+
+        opacity;
+
+}
+
+/* ==========================================================
+   END STYLE.CSS
+========================================================== */

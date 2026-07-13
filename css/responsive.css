@@ -1,0 +1,1028 @@
+/* ==========================================================
+   CULTURE ROLEPLAY
+   RESPONSIVE.CSS
+========================================================== */
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (max-width:1200px){
+
+    .hero-content{
+
+        max-width:800px;
+
+    }
+
+    .register-card{
+
+        max-width:950px;
+
+        padding:45px;
+
+    }
+
+    .hero-title{
+
+        font-size:56px;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET LANDSCAPE
+========================================================== */
+
+@media (max-width:992px){
+
+    .hero-section{
+
+        padding:90px 20px 70px;
+
+    }
+
+    .hero-title{
+
+        font-size:48px;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:22px;
+
+    }
+
+    .hero-description{
+
+        font-size:16px;
+
+    }
+
+    .hero-information{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .register-card{
+
+        padding:40px;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .form-group.full-width{
+
+        grid-column:auto;
+
+    }
+
+    .section-header{
+
+        align-items:flex-start;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLET PORTRAIT
+========================================================== */
+
+@media (max-width:768px){
+
+    /* =============================
+       HERO
+    ============================== */
+
+    .hero-section{
+
+        min-height:auto;
+
+        padding:70px 18px 50px;
+
+    }
+
+    .hero-logo{
+
+        width:120px;
+
+        height:120px;
+
+        margin-bottom:24px;
+
+    }
+
+    .hero-badge{
+
+        font-size:13px;
+
+        padding:9px 18px;
+
+    }
+
+    .hero-title{
+
+        font-size:40px;
+
+        line-height:1.1;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:18px;
+
+        letter-spacing:2px;
+
+    }
+
+    .hero-description{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+        margin-bottom:35px;
+
+    }
+
+    /* =============================
+       INFORMATION CARD
+    ============================== */
+
+    .hero-information{
+
+        gap:18px;
+
+    }
+
+    .info-card{
+
+        padding:22px;
+
+    }
+
+    .info-card i{
+
+        font-size:28px;
+
+    }
+
+    .info-card h3{
+
+        font-size:17px;
+
+    }
+
+    .info-card p{
+
+        font-size:14px;
+
+    }
+
+    /* =============================
+       REGISTER CARD
+    ============================== */
+
+    .register-section{
+
+        padding:0 18px 70px;
+
+        margin-top:0;
+
+    }
+
+    .register-card{
+
+        padding:30px 24px;
+
+        border-radius:24px;
+
+    }
+
+    /* =============================
+       HEADER
+    ============================== */
+
+    .register-header h2{
+
+        font-size:30px;
+
+    }
+
+    .register-header p{
+
+        font-size:15px;
+
+    }
+
+    /* =============================
+       SECTION
+    ============================== */
+
+    .section-header{
+
+        gap:16px;
+
+    }
+
+    .section-icon{
+
+        width:56px;
+
+        height:56px;
+
+        border-radius:16px;
+
+    }
+
+    .section-icon i{
+
+        font-size:22px;
+
+    }
+
+    .section-header h3{
+
+        font-size:22px;
+
+    }
+
+    .section-header p{
+
+        font-size:14px;
+
+    }
+
+    /* =============================
+       INPUT
+    ============================== */
+
+    .input-box input,
+
+    .input-box select{
+
+        height:56px;
+
+        font-size:15px;
+
+    }
+
+    .textarea-box textarea{
+
+        min-height:160px;
+
+    }
+
+    /* =============================
+       CHECKBOX
+    ============================== */
+
+    .checkbox-grid{
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+    }
+
+    .checkbox-card{
+
+        min-height:85px;
+
+    }
+
+    .checkbox-card i{
+
+        font-size:26px;
+
+    }
+
+    /* =============================
+       AGREEMENT
+    ============================== */
+
+    .agreement-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    /* =============================
+       SUBMIT
+    ============================== */
+
+    .submit-btn{
+
+        max-width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:576px){
+
+    /* =============================
+       HERO
+    ============================== */
+
+    .hero-section{
+
+        padding:55px 15px 40px;
+
+    }
+
+    .hero-logo{
+
+        width:95px;
+
+        height:95px;
+
+        margin-bottom:20px;
+
+    }
+
+    .hero-badge{
+
+        font-size:12px;
+
+        padding:8px 16px;
+
+        gap:8px;
+
+    }
+
+    .hero-title{
+
+        font-size:32px;
+
+        letter-spacing:1px;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:15px;
+
+        letter-spacing:1px;
+
+        margin-bottom:18px;
+
+    }
+
+    .hero-description{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+        margin-bottom:28px;
+
+    }
+
+    /* =============================
+       INFORMATION CARD
+    ============================== */
+
+    .hero-information{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+    .info-card{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+    .info-card i{
+
+        font-size:24px;
+
+    }
+
+    .info-card h3{
+
+        font-size:16px;
+
+    }
+
+    .info-card p{
+
+        font-size:13px;
+
+    }
+
+    /* =============================
+       REGISTER CARD
+    ============================== */
+
+    .register-section{
+
+        padding:0 15px 60px;
+
+    }
+
+    .register-card{
+
+        padding:22px 18px;
+
+        border-radius:20px;
+
+    }
+
+    .register-header{
+
+        margin-bottom:35px;
+
+    }
+
+    .register-header h2{
+
+        font-size:24px;
+
+    }
+
+    .register-header p{
+
+        font-size:14px;
+
+    }
+
+    /* =============================
+       SECTION
+    ============================== */
+
+    .form-section{
+
+        margin-bottom:40px;
+
+    }
+
+    .section-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+        margin-bottom:22px;
+
+    }
+
+    .section-icon{
+
+        width:50px;
+
+        height:50px;
+
+        border-radius:14px;
+
+    }
+
+    .section-icon i{
+
+        font-size:20px;
+
+    }
+
+    .section-header h3{
+
+        font-size:20px;
+
+    }
+
+    .section-header p{
+
+        font-size:13px;
+
+    }
+
+    /* =============================
+       FORM
+    ============================== */
+
+    .form-grid{
+
+        gap:18px;
+
+    }
+
+    .form-group label{
+
+        font-size:14px;
+
+    }
+
+    .input-box input,
+
+    .input-box select{
+
+        height:52px;
+
+        padding:0 16px 0 48px;
+
+        font-size:14px;
+
+    }
+
+    .input-box i{
+
+        left:15px;
+
+        font-size:15px;
+
+    }
+
+    .textarea-box textarea{
+
+        min-height:140px;
+
+        padding:16px;
+
+        font-size:14px;
+
+    }
+
+    .field-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:6px;
+
+    }
+
+    /* =============================
+       CHECKBOX
+    ============================== */
+
+    .checkbox-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .checkbox-card{
+
+        min-height:75px;
+
+    }
+
+    .checkbox-card span{
+
+        font-size:14px;
+
+    }
+
+    .checkbox-card i{
+
+        font-size:22px;
+
+    }
+
+    /* =============================
+       AGREEMENT
+    ============================== */
+
+    .agreement-card{
+
+        padding:20px;
+
+        gap:18px;
+
+    }
+
+    .agreement-icon{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .agreement-icon i{
+
+        font-size:24px;
+
+    }
+
+    .agreement-content h4{
+
+        font-size:18px;
+
+    }
+
+    .agreement-content p{
+
+        font-size:14px;
+
+    }
+
+    .agreement-checkbox{
+
+        gap:12px;
+
+    }
+
+    .agreement-checkbox span{
+
+        font-size:14px;
+
+    }
+
+    /* =============================
+       INFORMATION BOX
+    ============================== */
+
+    .information-box{
+
+        padding:20px;
+
+    }
+
+    .information-title{
+
+        font-size:16px;
+
+    }
+
+    .information-box li{
+
+        font-size:14px;
+
+    }
+
+    /* =============================
+       SUBMIT
+    ============================== */
+
+    .submit-btn{
+
+        height:56px;
+
+        font-size:16px;
+
+        border-radius:16px;
+
+    }
+
+    .submit-note{
+
+        font-size:13px;
+
+    }
+
+    /* =============================
+       FOOTER
+    ============================== */
+
+    .footer{
+
+        padding:60px 20px 40px;
+
+    }
+
+    .footer-content img{
+
+        width:70px;
+
+    }
+
+    .footer-content h3{
+
+        font-size:24px;
+
+    }
+
+    .footer-content p{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:400px){
+
+    /* =============================
+       HERO
+    ============================== */
+
+    .hero-section{
+
+        padding:45px 12px 30px;
+
+    }
+
+    .hero-logo{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+    .hero-title{
+
+        font-size:28px;
+
+        line-height:1.15;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:14px;
+
+        letter-spacing:.5px;
+
+    }
+
+    .hero-description{
+
+        font-size:13px;
+
+    }
+
+    /* =============================
+       REGISTER
+    ============================== */
+
+    .register-section{
+
+        padding:0 12px 45px;
+
+    }
+
+    .register-card{
+
+        padding:18px 15px;
+
+        border-radius:18px;
+
+    }
+
+    .register-header h2{
+
+        font-size:22px;
+
+    }
+
+    .register-label{
+
+        font-size:12px;
+
+        padding:8px 16px;
+
+    }
+
+    /* =============================
+       SECTION
+    ============================== */
+
+    .section-header h3{
+
+        font-size:18px;
+
+    }
+
+    .section-header p{
+
+        font-size:13px;
+
+    }
+
+    /* =============================
+       INPUT
+    ============================== */
+
+    .input-box input,
+
+    .input-box select{
+
+        height:48px;
+
+        font-size:13px;
+
+        padding-left:44px;
+
+    }
+
+    .input-box i{
+
+        left:14px;
+
+        font-size:14px;
+
+    }
+
+    .textarea-box textarea{
+
+        min-height:130px;
+
+        font-size:13px;
+
+    }
+
+    /* =============================
+       CHECKBOX
+    ============================== */
+
+    .checkbox-card{
+
+        min-height:70px;
+
+    }
+
+    .checkbox-card i{
+
+        font-size:20px;
+
+    }
+
+    .checkbox-card span{
+
+        font-size:13px;
+
+    }
+
+    /* =============================
+       SUBMIT
+    ============================== */
+
+    .submit-btn{
+
+        height:52px;
+
+        font-size:15px;
+
+    }
+
+    .submit-note{
+
+        font-size:12px;
+
+    }
+
+    /* =============================
+       TOAST
+    ============================== */
+
+    .toast{
+
+        left:12px;
+
+        right:12px;
+
+        min-width:auto;
+
+        max-width:none;
+
+        width:auto;
+
+        top:15px;
+
+        font-size:13px;
+
+        padding:14px 16px;
+
+    }
+
+    /* =============================
+       SCROLL BUTTON
+    ============================== */
+
+    #scrollTopBtn{
+
+        width:46px;
+
+        height:46px;
+
+        right:15px;
+
+        bottom:15px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ==========================================================
+   REDUCE MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+/* ==========================================================
+   LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height:600px) and (orientation:landscape){
+
+    .hero-section{
+
+        min-height:auto;
+
+        padding:50px 20px;
+
+    }
+
+    .hero-logo{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .hero-information{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   PRINT
+========================================================== */
+
+@media print{
+
+    .hero-glow,
+
+    .background-overlay,
+
+    .background-pattern,
+
+    #pageLoader,
+
+    #scrollTopBtn,
+
+    .submit-wrapper,
+
+    .footer-social{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+    .register-card{
+
+        box-shadow:none;
+
+        border:1px solid #ccc;
+
+        background:#fff;
+
+    }
+
+}
