@@ -775,7 +775,22 @@
 
     cursor:pointer;
 
+    background-color:#1a2235;
+
+    color:#ffffff;
+
 }
+
+.input-box select option{
+
+    background:#1a2235;
+
+    color:#ffffff;
+
+    padding:12px;
+
+}
+
 
 .input-box::after{
 
